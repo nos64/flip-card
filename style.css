@@ -1,0 +1,91 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+   
+}
+
+.quiz-area {
+    background-image: url("media/Worldmap.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+h1 {
+    font: 3em 'Stick No Bills', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.card-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    background-color: rgb(184, 149, 149);
+    border-radius: 10px;
+    text-align: center;
+    font: 2em 'Stick No Bills', sans-serif;
+    color: #fff;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.container:hover .card {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.container {
+    perspective: 1000px;
+}
+    
+
+.front,
+.back {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items:center;
+   font: 1em 'Stick No Bills', sans-serif;
+   color: #fff;
+   backface-visibility:hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    
+}
+
+.font {
+    z-index: 2;
+    background-color: rgb(184, 149, 149);
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
+.back {
+    z-index: 1;
+    background-color: rgb(124, 94, 94);
+    border-radius: 10px;
+    transform: rotateY(180deg);
+}
+    
